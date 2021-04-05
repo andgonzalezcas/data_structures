@@ -1,5 +1,4 @@
-import List.SimpleLinkedList;
-import List.DoubleLinkedList;
+import List.*;
 
 public class App {
 
