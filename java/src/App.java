@@ -2,7 +2,7 @@ import List.*;
 
 public class App {
 
-  public static void MySLL () {
+  public static void MySLL () { // Este es el ejemplo de la Simple Linked List
     SimpleLinkedList <Integer> MyList = new SimpleLinkedList <> ();
     System.out.println(MyList.isEmpty());
     MyList.insertBegin(1);
@@ -53,7 +53,7 @@ public class App {
     System.out.println(MyList2.toString());
   }
 
-  public static void MyDLL () {
+  public static void MyDLL () {// Este es el ejemplo de la Double Linked List
     DoubleLinkedList <Integer> MyList = new DoubleLinkedList <> ();
     System.out.println(MyList.toString());
     System.out.println(MyList.isEmpty());
@@ -104,10 +104,67 @@ public class App {
     DoubleLinkedList <String> MyList2 = new DoubleLinkedList <> (fruits);
     System.out.println(MyList2.toString());
   }
+
+  public static void MyStk () { // Este es el ejemplo de la Stack
+    Stack <Integer> myStack = new Stack <> ();
+    System.out.println(myStack.isEmpty());
+    myStack.push(3);
+    System.out.println(myStack.toString());
+    System.out.println(myStack.isEmpty());
+    myStack.push(2);
+    System.out.println(myStack.toString());
+    System.out.println(myStack.isEmpty());
+    myStack.push(1);
+    System.out.println(myStack.toString());
+    System.out.println(myStack.isEmpty());
+    System.out.println("Length --> "+myStack.size());
+    System.out.println("Peek --> "+myStack.peek());
+    System.out.println("Peek.data --> "+myStack.peek().getData());
+    myStack.pop();
+    System.out.println(myStack.toString());
+    System.out.println(myStack.isEmpty());
+    myStack.pop();
+    System.out.println(myStack.toString());
+    System.out.println(myStack.isEmpty());
+    myStack.pop();
+    System.out.println(myStack.toString());
+    System.out.println(myStack.isEmpty());
+  }
+
+  public static void MyQue () { // Este es el ejemplo de la Queue
+    Queue <Integer> myQueue = new Queue <> ();
+    System.out.println(myQueue.isEmpty());
+    myQueue.enQueue(1);
+    System.out.println(myQueue.toString());
+    System.out.println(myQueue.isEmpty());
+    myQueue.enQueue(2);
+    System.out.println(myQueue.toString());
+    System.out.println(myQueue.isEmpty());
+    myQueue.enQueue(3);
+    System.out.println(myQueue.toString());
+    System.out.println(myQueue.isEmpty());
+    System.out.println("Length --> "+myQueue.size());
+    System.out.println("Peek --> "+myQueue.peek());
+    System.out.println("Peek.data --> "+myQueue.peek().getData());
+    myQueue.deQueue();
+    System.out.println(myQueue.toString());
+    System.out.println(myQueue.isEmpty());
+    myQueue.deQueue();
+    System.out.println(myQueue.toString());
+    System.out.println(myQueue.isEmpty());
+    myQueue.deQueue();
+    System.out.println(myQueue.toString());
+    System.out.println(myQueue.isEmpty());
+  }
+
   public static void main(String[] args) throws Exception {
-    System.out.println("______________Simple Linked List______________");
+    /* System.out.println("______________Simple Linked List______________");
     MySLL();
     System.out.println("______________Double Linked List______________");
-    MyDLL();
+    MyDLL(); */
+    System.out.println("____________________Stack_____________________");
+    MyStk();
+    System.out.println("____________________Queue_____________________");
+    MyQue();
   }
 }
