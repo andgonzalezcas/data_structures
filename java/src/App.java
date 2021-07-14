@@ -1,7 +1,7 @@
 import List.*;
+import Tree.*;
 
 public class App {
-
   public static void MySLL () { // Este es el ejemplo de la Simple Linked List
     SimpleLinkedList <Integer> MyList = new SimpleLinkedList <> ();
     System.out.println(MyList.isEmpty());
@@ -27,9 +27,9 @@ public class App {
     MyList.insert(3, 2);
     System.out.println(MyList.toString());
     Integer[] indexArray = MyList.find(3);
-    for (int i = 0; i < indexArray.length; i++) {
+    for (int i = 0; i < indexArray.length; i++)
       System.out.println(indexArray[i]);
-    }
+    
     MyList.delete(2);
     System.out.println(MyList.toString());
 
@@ -157,14 +157,88 @@ public class App {
     System.out.println(myQueue.isEmpty());
   }
 
+  public static void MyBts () {
+    BinarySearchTree<String> myBts = new BinarySearchTree<>();
+    myBts.insert(15, "");
+    myBts.insert(9, "");
+    myBts.insert(6, "");
+    myBts.insert(14, "");
+    myBts.insert(13, "");
+    myBts.insert(20, "");
+    myBts.insert(17, "");
+    myBts.insert(64, "");
+    myBts.insert(26, "");
+    myBts.insert(72, "");
+    myBts.remove(20);
+    myBts.inorder();
+    System.out.println();
+    myBts.preorden();
+    System.out.println();
+  }
+
+  public static void MyAvl () {
+    AdelsonVelskiiLandis<String> myAvl = new AdelsonVelskiiLandis<>();
+    myAvl.insert(1, "");
+    myAvl.preorden();
+    System.out.println();
+    myAvl.insert(2, "");
+    myAvl.preorden();
+    System.out.println();
+    myAvl.insert(3, "");
+    myAvl.preorden();
+    System.out.println();
+    myAvl.insert(4, "");
+    myAvl.preorden();
+    System.out.println();
+    myAvl.insert(5, "");
+    myAvl.preorden();
+    System.out.println();
+    myAvl.insert(6, "");
+    myAvl.preorden();
+    System.out.println();
+    myAvl.insert(7, "");
+    myAvl.preorden();
+    System.out.println();
+    myAvl.insert(8, "");
+    myAvl.preorden();
+    System.out.println();
+    myAvl.insert(9, "");
+    myAvl.preorden();
+    System.out.println();
+    myAvl.insert(10, "");
+    myAvl.preorden();
+    System.out.println();
+    myAvl.insert(11, "");
+    myAvl.preorden();
+    System.out.println();
+    myAvl.insert(12, "");
+    myAvl.preorden();
+    System.out.println();
+    myAvl.insert(13, "");
+    myAvl.preorden();
+    System.out.println();
+    myAvl.inorder();
+    System.out.println();
+    myAvl.remove(8);
+    myAvl.remove(6);
+    myAvl.preorden();
+    System.out.println();
+    myAvl.inorder();
+    System.out.println();
+  }
+
   public static void main(String[] args) throws Exception {
     /* System.out.println("______________Simple Linked List______________");
     MySLL();
     System.out.println("______________Double Linked List______________");
     MyDLL(); */
-    System.out.println("____________________Stack_____________________");
+    /* System.out.println("____________________Stack_____________________");
     MyStk();
     System.out.println("____________________Queue_____________________");
-    MyQue();
+    MyQue(); */
+    System.out.println("___________________BST-Tree___________________");
+    MyBts();
+    System.out.println("___________________AVL-Tree___________________");
+    MyAvl();
   }
 }
