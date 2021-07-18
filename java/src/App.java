@@ -1,5 +1,6 @@
 import List.*;
 import Tree.*;
+import Heap.*;
 
 public class App {
   public static void MySLL () { // Este es el ejemplo de la Simple Linked List
@@ -157,7 +158,7 @@ public class App {
     System.out.println(myQueue.isEmpty());
   }
 
-  public static void MyBts () {
+  public static void MyBts () {// Este es el ejemplo de un Binary Search Tree
     BinarySearchTree<String> myBts = new BinarySearchTree<>();
     myBts.insert(15, "");
     myBts.insert(9, "");
@@ -176,7 +177,7 @@ public class App {
     System.out.println();
   }
 
-  public static void MyAvl () {
+  public static void MyAvl () { // Este es el ejemplo de Adelson Velskii Landis Tree
     AdelsonVelskiiLandis<String> myAvl = new AdelsonVelskiiLandis<>();
     myAvl.insert(1, "");
     myAvl.preorden();
@@ -227,6 +228,54 @@ public class App {
     System.out.println();
   }
 
+  public static void MyMaxH () { // Este es el ejemplo de Max Heap
+    MaxHeap<Integer> myMaxH = new MaxHeap<>(15);
+    myMaxH.enQueue(5);
+    myMaxH.enQueue(3);
+    myMaxH.enQueue(17);
+    myMaxH.enQueue(10);
+    myMaxH.enQueue(84);
+    myMaxH.enQueue(19);
+    myMaxH.enQueue(6);
+    myMaxH.enQueue(22);
+    myMaxH.enQueue(9);
+    myMaxH.enQueue(2);
+
+    myMaxH.print();
+    myMaxH.deQueue();
+    System.out.println();
+    System.out.println();
+    myMaxH.print();
+    myMaxH.deQueue();
+    System.out.println();
+    System.out.println();
+    myMaxH.print();
+  }
+
+  public static void MyMinH () { // Este es el ejemplo de Min Heap
+    MinHeap<Integer> myMinH = new MinHeap<>(15);
+    myMinH.enQueue(5);
+    myMinH.enQueue(3);
+    myMinH.enQueue(17);
+    myMinH.enQueue(10);
+    myMinH.enQueue(84);
+    myMinH.enQueue(19);
+    myMinH.enQueue(6);
+    myMinH.enQueue(22);
+    myMinH.enQueue(9);
+    myMinH.enQueue(2);
+
+    myMinH.print();
+    myMinH.deQueue();
+    System.out.println();
+    System.out.println();
+    myMinH.print();
+    myMinH.deQueue();
+    System.out.println();
+    System.out.println();
+    myMinH.print();
+  }
+
   public static void main(String[] args) throws Exception {
     /* System.out.println("______________Simple Linked List______________");
     MySLL();
@@ -240,5 +289,9 @@ public class App {
     MyBts();
     System.out.println("___________________AVL-Tree___________________");
     MyAvl();
+    System.out.println("___________________Max Heap___________________");
+    MyMaxH();
+    System.out.println("___________________Min Heap___________________");
+    MyMinH();
   }
 }

@@ -1,27 +1,17 @@
 package List;
 
 public class DoubleLinkedList <T> extends SimpleLinkedList <T> {
-  public DoubleLinkedList () {
-    super();
-  }
-
+  public DoubleLinkedList () { super(); }
   public DoubleLinkedList (T[] array) {
     super();
-    for (int i = 0; i < array.length; i++) {
+    for (int i = 0; i < array.length; i++)
       this.insertEnd(array[i]);
-    }
   }
 
   @Override
-  public void insertBegin (T data) {
-    this.insert(data, 0);
-  }
-
+  public void insertBegin (T data) { this.insert(data, 0); }
   @Override
-  public void insertEnd (T data) {
-    this.insert(data, this.length);
-  }
-
+  public void insertEnd (T data) { this.insert(data, this.length); }
   @Override
   public void insert (T data, Integer index) {
     if (index < 0 || index > this.length)
@@ -51,15 +41,9 @@ public class DoubleLinkedList <T> extends SimpleLinkedList <T> {
   }
 
   @Override
-  public Node <T> deleteBegin () {
-    return this.delete (0);
-  }
-
+  public Node <T> deleteBegin () { return this.delete (0); }
   @Override
-  public Node <T> deleteEnd () {
-    return this.delete (this.length - 1);
-  }
-  
+  public Node <T> deleteEnd () { return this.delete (this.length - 1); }
   @Override
   public Node <T> delete (Integer index) {
     Node <T> returnNode = null;
